@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+<body>
+Make a dbclick on td
+<table>
+    <tr>
+        <td>Content</td>
+        <td>Test content</td>
+    </tr>
+    <tr>
+        <td>New text</td>
+        <td>Some text is here</td>
+    </tr>
+    <tr>
+        <td>Hello world</td>
+        <td>Lorem ipsum dolor sit amet</td>
+    </tr>
+</table>
+
+<script type="text/html" id="inlineEditorOverlay">
+    <div class="inline-editor-overlay">
+        <div contenteditable="true" class="inline-editor-content"></div>
+        <div class="inline-editor-controls">
+            <button data-tag="b" class="inline-editor-button inline-editor-button-bold"><b>b</b></button>
+            <button data-tag="i" class="inline-editor-button inline-editor-button-italic"><i>i</i></button>
+            <button data-tag="u" class="inline-editor-button inline-editor-button-underline"><u>u</u></button>
+        </div>
+    </div>
+</script>
+<script src="static/js/inlineEditor.js"></script>
+<script src="static/js/index.js"></script>
+</body>
+</html>

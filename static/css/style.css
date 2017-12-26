@@ -1,0 +1,24 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td {
+    border: 1px solid black;
+    position: relative;
+}
+
+.inline-editor-content {
+    outline: none;
+}
+
+.inline-editor-instance {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background: white;
+    box-shadow: 0 0 5px 4px black;
+    min-height: 100%;
+    min-width: 100%
+}
