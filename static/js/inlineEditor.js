@@ -64,7 +64,7 @@ InlineEditor.prototype._attachOverlayToCell = function () {
 
 InlineEditor.prototype._bindButtonsHandlers = function () {
 	var _self = this;
-	this._overlayContentButtons.forEach(function(button){
+	[].forEach.call(this._overlayContentButtons, function(button){
 		var tagName = button.getAttribute('data-tag');
 		button.addEventListener('mousedown', function (e) {
 			var selection = window.getSelection();
