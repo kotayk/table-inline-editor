@@ -14,7 +14,7 @@ Make a dbclick on td
     </tr>
     <tr>
         <td>New text</td>
-        <td>Some text is here</td>
+        <td>Some many cool text is here. There are so many words in each sentence. This text is for testing justify.</td>
     </tr>
     <tr>
         <td>Hello world</td>
@@ -25,10 +25,22 @@ Make a dbclick on td
 <script type="text/html" id="inlineEditorOverlay">
     <div class="inline-editor-overlay">
         <div contenteditable="true" class="inline-editor-content"></div>
+        <div style="display:none;" class="inline-editor-link">
+            <input placeholder="Paste link" type="text" value="#" class="inline-editor-link-input">
+            <button class="inline-editor-button inline-editor-button-submit-link">Add link</button>
+            <button class="inline-editor-button inline-editor-button-submit-link-back">Back</button>
+        </div>
         <div class="inline-editor-controls">
             <button data-tag="b" class="inline-editor-button inline-editor-button-bold"><b>b</b></button>
             <button data-tag="i" class="inline-editor-button inline-editor-button-italic"><i>i</i></button>
             <button data-tag="u" class="inline-editor-button inline-editor-button-underline"><u>u</u></button>
+            <button data-tag="link" class="inline-editor-button inline-editor-button-link"><em>href</em></button>
+            <button data-tag="ol" class="inline-editor-button inline-editor-button-ol">Ordered list</button>
+            <button data-tag="ul" class="inline-editor-button inline-editor-button-ul">Unordered list</button>
+            <button data-tag="jl" class="inline-editor-button inline-editor-button-ul">Justify left</button>
+            <button data-tag="jc" class="inline-editor-button inline-editor-button-ul">Justify center</button>
+            <button data-tag="jf" class="inline-editor-button inline-editor-button-ul">Justify full</button>
+            <button data-tag="jr" class="inline-editor-button inline-editor-button-ul">Justify right</button>
         </div>
     </div>
 </script>
