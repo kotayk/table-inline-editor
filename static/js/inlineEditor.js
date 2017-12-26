@@ -125,12 +125,6 @@ InlineEditor.prototype._bindButtonsHandlers = function () {
 						_self._handleLinkDialog();
 						break;
 				}
-
-				// var selectedText = range.cloneContents();
-				// range.deleteContents();
-				// var replacementText = document.createElement(tagName);
-				// replacementText.appendChild(selectedText);
-				// range.insertNode(replacementText);
 			}
 		});
 	});
@@ -144,14 +138,11 @@ InlineEditor.prototype._bindButtonsHandlers = function () {
 		console.log(_self._persistedRange);
 		var inputValue = _self._overlayContentLinkInput.value;
 		var selection = window.getSelection();
-		// if (!_self._persistedRange) {
-		// 	_self._persistedRange = selection.getRangeAt(0);
-		// } else {
-			selection.removeAllRanges();
-			selection.addRange(_self._persistedRange);
-		// }
+		selection.removeAllRanges();
+		selection.addRange(_self._persistedRange);
 
 		document.execCommand('createLink', false, inputValue.toString());
+		selection.anchorNode.parentElement.target = '_blank';
 		_self._persistedRange = '';
 		_self._closeCreateLinkDialog();
 		_self._showMainButtons();
@@ -199,11 +190,6 @@ InlineEditor.prototype._showMainButtons = function () {
 InlineEditor.prototype._handleLinkDialog = function () {
 	this._hideMainButtons();
 	this._openCreateLinkDialog();
-	// if (this._overlayContentLinkContainer.style.display == 'none') {
-	// 	this._showCreateLinkDialog()
-	// } else {
-	// 	this._hideCreateLinkDialog();
-	// }
 };
 
 InlineEditor.prototype._closeCreateLinkDialog = function () {
